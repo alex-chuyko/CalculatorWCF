@@ -1,0 +1,8 @@
+C:\Users\Александр\Documents\Visual Studio 2015\Projects\SPP\Lab5\ServiceLib\CalculatorHost\bin\Debug\CalculatorHost.exe.config
+C:\Users\Александр\Documents\Visual Studio 2015\Projects\SPP\Lab5\ServiceLib\CalculatorHost\bin\Debug\CalculatorHost.exe
+C:\Users\Александр\Documents\Visual Studio 2015\Projects\SPP\Lab5\ServiceLib\CalculatorHost\bin\Debug\CalculatorHost.pdb
+C:\Users\Александр\Documents\Visual Studio 2015\Projects\SPP\Lab5\ServiceLib\CalculatorHost\bin\Debug\ServiceLib.dll
+C:\Users\Александр\Documents\Visual Studio 2015\Projects\SPP\Lab5\ServiceLib\CalculatorHost\bin\Debug\ServiceLib.pdb
+C:\Users\Александр\Documents\Visual Studio 2015\Projects\SPP\Lab5\ServiceLib\CalculatorHost\obj\Debug\CalculatorHost.csprojResolveAssemblyReference.cache
+C:\Users\Александр\Documents\Visual Studio 2015\Projects\SPP\Lab5\ServiceLib\CalculatorHost\obj\Debug\CalculatorHost.exe
+C:\Users\Александр\Documents\Visual Studio 2015\Projects\SPP\Lab5\ServiceLib\CalculatorHost\obj\Debug\CalculatorHost.pdb
