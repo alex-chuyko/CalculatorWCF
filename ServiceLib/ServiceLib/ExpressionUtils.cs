@@ -44,8 +44,8 @@ namespace ServiceLib
             List<int> priority = new List<int>();
             for (int i = 0; i < tokens.Count(); i++)
             {
-                int tempIntVar;
-                if (Int32.TryParse(tokens[i], out tempIntVar))
+                double tempIntVar;
+                if (Double.TryParse(tokens[i], out tempIntVar))
                 {
                     result.Add(tokens[i]);
                 }

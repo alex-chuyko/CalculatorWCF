@@ -16,7 +16,7 @@ namespace CalculatorHost
                 host.Open(); 
                 Console.WriteLine("Host started...");
                 Console.ReadLine();
-            }
+            }   
         }
     }
 }

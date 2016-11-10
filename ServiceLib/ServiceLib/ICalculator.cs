@@ -12,7 +12,7 @@ namespace ServiceLib
     public interface ICalculator
     {
         [OperationContract]
-        int CalculateExpression(string expression);
+        string CalculateExpression(string expression);
 
         [OperationContract]
         void Set(double a);

@@ -21,14 +21,36 @@ namespace ServiceLib
         [DllImport(@"C:\Users\Александр\Documents\Visual Studio 2015\Projects\SPP\Lab5\MathFuncDll\Debug\MathFuncDll.dll", CallingConvention = CallingConvention.StdCall)]
         static extern double Divide(double a, double b);
 
-        public int CalculateExpression(string expression)
+        public string CalculateExpression(string expression)
         {
             string[] tokens = ExpressionUtils.ParseExpression(expression);
             List<string> rpn = ExpressionUtils.CreateRPN(tokens);
-            Expression<Func<int>> lambda = Expression.Lambda<Func<int>>(GetExpressionTree(rpn));
-            Func<int> myDelegate = lambda.Compile();
-            return myDelegate();
+            Expression<Func<double>> lambda = Expression.Lambda<Func<double>>(GetExpressionTree(rpn));
+            Func<double> myDelegate = lambda.Compile();
+            double result = myDelegate();
+            return result.ToString();
         }
+
+        private Expression GetExpressionTree(List<string> rpn)
+        {
+            ExpressionHandler expressionHandler = new ExpressionHandler();
+            List<Expression> expressionStack = new List<Expression>();
+            foreach (string token in rpn)
+            {
+                double tempIntVar;
+                if (Double.TryParse(token, out tempIntVar))
+                {
+                    expressionStack.Add(Expression.Constant(tempIntVar));
+                }
+                else
+                {
+                    expressionHandler.Handle(expressionStack, token);
+                }
+            }
+            return expressionStack[0];
+        }
+
+        private double result = 0;
 
         public void Set(double a)
         {
@@ -58,27 +80,6 @@ namespace ServiceLib
         public double Result()
         {
             return result;
-        }
-
-        private double result = 0;
-
-        private Expression GetExpressionTree(List<string> rpn)
-        {
-            ExpressionHandler expressionHandler = new ExpressionHandler();
-            List<Expression> expressionStack = new List<Expression>();
-            foreach(string token in rpn)
-            {
-                int tempIntVar;
-                if (Int32.TryParse(token, out tempIntVar))
-                {
-                    expressionStack.Add(Expression.Constant(tempIntVar));
-                }
-                else
-                {
-                    expressionHandler.Handle(expressionStack, token);
-                }
-            }
-            return expressionStack[0];
         }
     }
 }

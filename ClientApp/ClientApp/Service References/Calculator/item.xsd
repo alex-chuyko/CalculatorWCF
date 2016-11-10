@@ -10,7 +10,7 @@
   <xs:element name="CalculateExpressionResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="CalculateExpressionResult" type="xs:int" />
+        <xs:element minOccurs="0" name="CalculateExpressionResult" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

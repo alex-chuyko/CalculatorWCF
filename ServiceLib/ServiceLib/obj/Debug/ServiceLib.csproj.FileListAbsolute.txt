@@ -3,4 +3,3 @@ C:\Users\Александр\Documents\Visual Studio 2015\Projects\SPP\Lab5\Servi
 C:\Users\Александр\Documents\Visual Studio 2015\Projects\SPP\Lab5\ServiceLib\ServiceLib\bin\Debug\ServiceLib.pdb
 C:\Users\Александр\Documents\Visual Studio 2015\Projects\SPP\Lab5\ServiceLib\ServiceLib\obj\Debug\ServiceLib.dll
 C:\Users\Александр\Documents\Visual Studio 2015\Projects\SPP\Lab5\ServiceLib\ServiceLib\obj\Debug\ServiceLib.pdb
-C:\Users\Александр\Documents\Visual Studio 2015\Projects\SPP\Lab5\ServiceLib\ServiceLib\obj\Debug\ServiceLib.csprojResolveAssemblyReference.cache

@@ -16,10 +16,10 @@ namespace ClientApp.Calculator {
     public interface ICalculator {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/CalculateExpression", ReplyAction="http://tempuri.org/ICalculator/CalculateExpressionResponse")]
-        int CalculateExpression(string expression);
+        string CalculateExpression(string expression);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/CalculateExpression", ReplyAction="http://tempuri.org/ICalculator/CalculateExpressionResponse")]
-        System.Threading.Tasks.Task<int> CalculateExpressionAsync(string expression);
+        System.Threading.Tasks.Task<string> CalculateExpressionAsync(string expression);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Set", ReplyAction="http://tempuri.org/ICalculator/SetResponse")]
         void Set(double a);
@@ -85,11 +85,11 @@ namespace ClientApp.Calculator {
                 base(binding, remoteAddress) {
         }
         
-        public int CalculateExpression(string expression) {
+        public string CalculateExpression(string expression) {
             return base.Channel.CalculateExpression(expression);
         }
         
-        public System.Threading.Tasks.Task<int> CalculateExpressionAsync(string expression) {
+        public System.Threading.Tasks.Task<string> CalculateExpressionAsync(string expression) {
             return base.Channel.CalculateExpressionAsync(expression);
         }
         

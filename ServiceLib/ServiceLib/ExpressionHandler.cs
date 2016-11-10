@@ -75,7 +75,13 @@ namespace ServiceLib
                 stack.RemoveAt(stack.Count - 1);
                 Expression left = stack[stack.Count - 1];
                 stack.RemoveAt(stack.Count - 1);
-                stack.Add(Expression.Divide(left, right));
+                Expression<Func<double>> temp = Expression.Lambda<Func<double>>(right);
+                Func<double> res = temp.Compile();
+                double result = res();
+                if (result != 0)
+                    stack.Add(Expression.Divide(left, right));
+                else
+                    throw new Exception("right cannot be zero");
             }
         }
     }
